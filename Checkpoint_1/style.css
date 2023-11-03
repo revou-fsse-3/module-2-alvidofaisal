@@ -1,0 +1,483 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/Poppins-Regular.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Almarose';
+    src: url('assets/Almarose-Semibold.otf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+:root {
+    /* Colors */
+    --color: #9176FF;
+    --dark-color: #2b2b2b;
+    --dark-icon-color: #fff;
+    --light-color: #f7f7f7;
+    --light-icon-color: #FFDE59;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    background-color: var(--light-color);
+}
+
+.main-header {
+    position: relative;
+    z-index: 999;
+}
+
+a, button {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 250px;
+}
+
+.navigation {
+    position: fixed;
+    right: -500px;
+    width: 350px;
+    height: 100%;
+    background-color: #000;
+    transition: .5s;
+}
+
+.navigation ul li {
+    color: #fff;
+    text-align: right;
+    text-transform: uppercase;
+    list-style-type: none;
+    font-size: 1.5em;
+    padding: 20px 30px;
+    border-bottom: 1pt solid #252525;
+}
+
+.hamburger, .bar {
+    position: fixed;
+}
+
+.hamburger {
+    display: block;
+    top: 5%;
+    left: 95%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+}
+
+.bar {
+    top: 3px;
+    background: #fff;
+    width: 100%;
+    height: 4px;
+    transition: all .3s ease in;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#bar2 {
+    top: 11px;
+}
+
+#bar3 {
+    top: 19px;
+}
+
+.navigation.active {
+    right: 0;
+}
+
+.hamburger.open #bar1 {
+    background-color: #fff;
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.hamburger.open #bar2 {
+    background-color: transparent;
+}   
+
+.hamburger.open #bar3 {
+    background-color: #fff;
+    transform: rotate(-45deg) translate(6px, -5px);
+}   
+
+.search {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url(images/tokyo-day-large.jpg);
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .search {
+        background-image: url(/images/tokyo-day-medium.jpg);
+    }
+}
+
+@media (max-width: 468px) {
+    .search {
+        background-image: url(/images/tokyo-day-mobile.jpg);
+    }
+}
+
+.search img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.search .content {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.search h1, p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search h1 {
+    font-size: 8.65rem;
+    font-weight: 600;
+    font-family: 'Almarose';
+}
+
+.search p {
+    font-size: 1.5rem;
+    margin-top: 8px;
+}
+
+.search .search-box {
+    height: 55px;
+    margin: 45px 0;
+    position: relative;
+}
+
+.search-box i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    font-size: 1.4rem;
+    color: #8d8d8d;
+    transform: translateY(-50%);
+}
+
+input, button, i {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+    padding-left: 55px;
+}
+
+.btn {
+    background-color: #fff;
+    width: 7.5em;
+    height: 4em;
+    border-radius: 5em;
+    padding: 0 0.25em;
+    box-shadow: inset 0 4px 30px rgba(0, 0, 0, 0.1),
+                inset 0 4px 4px rgba(0, 0, 0, 0.1),
+                inset 0 -2px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    left: 40%;
+}
+
+.btn__indicator {
+    background-color: #fff;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform .3s ease;
+}
+
+.btn__icon-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn__icon {
+    color: var(--light-icon-color);
+    font-size: 1.5rem;
+}
+
+.btn__icon.animated {
+    animation: spin 0.5s;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body.darkmode {
+    background-color: var(--dark-color);
+}
+
+.darkmode .btn {
+    background: #6c757d;
+    box-shadow: inset 0 4px 30px rgba(0, 0, 0, 0.3),
+                inset 4px 0 4px rgba(0, 0, 0, 0.3),
+                inset 0 -2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.darkmode .btn__indicator {
+    transform: translateX(3.5em);
+    background-color: var(--dark-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.darkmode .btn__icon {
+    color: var(--dark-icon-color);
+}
+
+.darkmode .search {
+    background-image: url(/images/tokyo-dark-large.jpg);
+}
+
+@media (max-width: 768px) {
+    .darkmode .search {
+        background-image: url(/images/tokyo-dark-medium.jpg);
+    }
+}
+
+@media (max-width: 468px) {
+    .darkmode .search {
+        background-image: url(/images/tokyo-dark-mobile.jpg);
+    }
+}
+
+.darkmode .search-box input {
+    background: var(--dark-color);
+}
+
+.darkmode .lightbox .wrapper {
+    background: var(--dark-color);
+}
+
+.darkmode .lightbox .photographer {
+    color: #6c757d;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    align-items: center;
+}
+
+.gallery .images {
+    gap: 15px;
+    max-width: 95%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    columns: 5 340px;
+}
+
+.images .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    position: relative;
+    list-style: none;
+    margin-bottom: 14px;
+    border-radius: 4px;
+}
+
+.images .card .details {
+    position: absolute;
+    bottom: -100px;
+    width: 106%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    transition: bottom 0.1s ease;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.images .card:hover .details {
+    bottom: 0;
+}
+
+.photographer {
+    color: #fff;   
+    display: flex;
+    align-items: center;
+}
+
+.details .photographer i {
+    font-size: 1.4rem;
+    margin-right: 10px;
+
+}
+
+.details .photographer span {
+    font-size: 1.05rem;
+}
+
+.card .details button {
+    cursor: pointer;
+    padding: 3px 8px;
+    font-size: 1.1rem;
+    background: #fff;
+}
+
+.images img {
+    width: 100%;
+}
+
+.gallery .load-more {
+    margin: 50px auto;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 12px 27px;
+    background: #4070f4;
+}
+
+.gallery .load-more.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.lightbox {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0,0,0,0.65);
+}
+
+.lightbox.show {
+    display: block;
+}
+
+.lightbox .wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    padding: 20px;
+    max-width: 850px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .photographer {
+    color: #333;
+}
+
+header .photographer i {
+    font-size: 1.7rem;
+}
+
+header .photographer span {
+    font-size: 1.2rem;
+}
+
+header .buttons i {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    background: #4070f4;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.buttons i:last-child {
+    margin-left: 10px;
+    background: #6c757d;
+}
+
+.preview-img {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+.wrapper .preview-img .img {
+    max-height: 65vh;
+    max-width: 90vh;
+}
+
+.preview-img .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        left: 90%;
+    }
+
+    .search h1 {
+        font-size: 6.65rem;
+    }
+
+    .search p {
+        font-size: 1.2rem;
+        margin-top: 27px;
+    }
+
+    .search-box input {
+        width: 95% !important;
+        font-size: 1rem;
+    }
+}
+
+
