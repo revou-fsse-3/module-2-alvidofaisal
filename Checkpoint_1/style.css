@@ -478,6 +478,10 @@ header .buttons i {
         width: 95% !important;
         font-size: 1rem;
     }
+
+    .btn {
+        left: 38%;
+    }
 }
 
 
