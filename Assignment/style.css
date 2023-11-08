@@ -290,6 +290,7 @@ body.darkmode {
 
 .darkmode .search-box input {
     background: var(--dark-color);
+    color: #8d8d8d;
 }
 
 .darkmode .lightbox .wrapper {
@@ -297,7 +298,7 @@ body.darkmode {
 }
 
 .darkmode .lightbox .photographer {
-    color: #6c757d;
+    color: var(--dark-icon-color);
 }
 
 .gallery {
@@ -329,7 +330,7 @@ body.darkmode {
 .images .card .details {
     position: absolute;
     bottom: -100px;
-    width: 106%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -362,7 +363,7 @@ body.darkmode {
     cursor: pointer;
     padding: 3px 8px;
     font-size: 1.1rem;
-    background: #fff;
+    background: #4070f4;
 }
 
 .images img {
@@ -480,7 +481,7 @@ header .buttons i {
     }
 
     .btn {
-        left: 38%;
+        left: 37%;
     }
 }
 
