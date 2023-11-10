@@ -290,7 +290,6 @@ body.darkmode {
 
 .darkmode .search-box input {
     background: var(--dark-color);
-    color: #8d8d8d;
 }
 
 .darkmode .lightbox .wrapper {
@@ -298,7 +297,7 @@ body.darkmode {
 }
 
 .darkmode .lightbox .photographer {
-    color: var(--dark-icon-color);
+    color: #fff;
 }
 
 .gallery {
@@ -481,7 +480,7 @@ header .buttons i {
     }
 
     .btn {
-        left: 37%;
+        left: 38%;
     }
 }
 

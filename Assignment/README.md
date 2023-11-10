@@ -2,7 +2,9 @@
 
 This is the assignment that i have made for RevoU FSSE Module 2 - Checkpoint #1.
 
-Deployed it using vercel: 
+An image search engine using Pexels API.
+
+Deployed it using vercel: https://module-2-alvidofaisal.vercel.app/
 
 The tasks fulfilled within this assignment:
 -  Custom font applied using @font-face: 'Poppins' and 'Almarose'
