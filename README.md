@@ -28,14 +28,14 @@ Module 2 Assignment: https://omage.rafp.site
 <p><b>Navigate to Domain Settings:</b> In your Vercel project dashboard, go to the "Settings" tab and then to the "Domains" section.</p>
 <p><b>Add Your Domain:</b> Click on "Add" and enter your custom domain name, rafp.site.</p>
 <p><b>Verify Ownership:</b> Follow the instructions to verify your domain ownership. This typically involves adding a TXT record in your domain registrar's DNS settings.</p>
+<img src="Screenshots/custom_domain.png">
 
 <h3>Configure DNS with Vercel Nameservers</h3>
 <p><b>Get Vercel DNS Details:</b> Vercel will provide you with its DNS nameservers details.</p>
 <p><b>Update Nameservers:</b> Go to your domain registrar's website, find the DNS settings for your custom site, and replace the current nameservers with the ones provided by Vercel.</p>
 <p><b>Propagation:</b> Wait for the DNS changes to propagate. This may take up to 48 hours.</p>
 <p><b>Final Verification:</b> Once the DNS changes have propagated, go back to Vercel's domain settings and verify that your domain is correctly configured.</p>
-
-<img src="Screenshots/custom_domain.png">
+<img src="Screenshots/dns.png">
 
 
 
@@ -56,5 +56,5 @@ srcset) method.
 - Simple transition (silde) applied in darkmode button
 - Created day and night/dark mode, and made sure the the settings is still saved eventhough the user refreshes the browser.
 
-<img src="Screenshots/dns.png">
+
 
